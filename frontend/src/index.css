@@ -1,0 +1,63 @@
+:root {
+  /* Paleta: papel de libro contable verde pálido */
+  --paper: #eaf1ec;
+  --paper-raised: #f2f7f3;
+  --rule: #b9cdbe;
+  --rule-strong: #7f9c88;
+  --ink: #1f2a24;
+  --ink-soft: #4c5c52;
+  --debit: #a13d2d;   /* tinta roja tradicional para gastos/débitos */
+  --credit: #2f5233;  /* tinta verde oscura para positivo */
+  --stamp: #a6772a;   /* dorado sello de goma, para acentos interactivos */
+
+  --font-display: "Lora", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    var(--rule) 28px
+  );
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 32px 96px;
+}
+
+::selection {
+  background: var(--stamp);
+  color: var(--paper);
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--credit);
+}
+
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

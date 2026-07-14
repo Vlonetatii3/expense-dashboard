@@ -1,4 +1,7 @@
 fastapi
-pandas
 uvicorn
 SQLAlchemy
+psycopg2-binary
+pandas
+python-dotenv
+pydantic
